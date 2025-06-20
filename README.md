@@ -22,8 +22,8 @@ Ce site web sert de portefeuille pour mes projets web. Vous y trouverez des desc
 | `index.html` | Page d'accueil de la bibliothèque web. |
 | `qui-suis-je.html` | Page présentant l'auteur du site. |
 | `github.html` | Page avec des informations sur mon profil GitHub. |
-| `accueil-scrumzy.html` | Page d'accueil du site Scrumzy. |
-| `accueil-pubg.html` | Page d'accueil du site PUBG Explorer. |
+| `accueil-scrumzy.html` | Page d'accueil du site Scrumzy qui mène vers le site scrumzy. |
+| `accueil-pubg.html` | Page d'accueil du site PUBG qui mène vers le site PUBG. |
 
 ---
 
@@ -31,27 +31,9 @@ Ce site web sert de portefeuille pour mes projets web. Vous y trouverez des desc
 
 - **HTML5** : Pour la structure des pages web.
 - **CSS3** : Pour le style et la mise en page.
-- **JavaScript** : Pour les fonctionnalités interactives (si applicable).
 
----
 
-## 📁 Arborescence Simplifiée
 
-```
-Bibliothèque-Web/
-├── index.html
-├── qui-suis-je.html
-├── github.html
-├── accueil-scrumzy.html
-├── accueil-pubg.html
-└── media/
-    ├── css/
-    │   ├── index.css
-    │   ├── scrumzy.css
-    │   └── pubg.css
-    └── images/
-        └── [images du site : logos, illustrations, etc.]
-```
 
 ---
 
