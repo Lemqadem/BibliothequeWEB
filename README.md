@@ -1,7 +1,7 @@
 
 # 🌐 Bibliothèque Web d'Ervan Lemqadem
 
-Bienvenue dans ma bibliothèque web, un espace où je présente mes différentes créations web. Ce projet a été développé pour montrer mes compétences en développement web et partager mes projets avec le monde.
+Bienvenue dans ma bibliothèque web, un espace où vous pourrez retrouver les différents sites web que j'ai réalisé, dans le cadre de projets scolaire ou non. J'espère que vous apprecierez mon travail :) !
 
 ---
 
