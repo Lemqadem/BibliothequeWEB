@@ -122,6 +122,12 @@ h1{
 .container:hover .description {
   opacity: 1;
 }
+.logo-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
 
 footer {
     
