@@ -1,0 +1,231 @@
+/* Réinitialisation : inclut padding et bordure dans la taille des éléments, supprime marges et paddings par défaut */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style de base du corps : fond noir, police Arial sans-serif */
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Barre de navigation : fond jaune, disposition en ligne, éléments espacés et centrés verticalement */
+nav {
+  background-color: #FDB714;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Liste horizontale sans puces pour les éléments de navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Style des éléments de menu : fond sombre, texte jaune, coins arrondis, bordure jaune, marges entre éléments */
+nav li {
+  padding: 10px 20px;
+  background-color: #1D1D1D;
+  color: #FDB714;
+  border-radius: 30px;
+  border: 2px solid #FDB714;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* Liens de navigation en jaune, sans soulignement */
+nav a {
+  color: #FDB714;
+  text-decoration: none;
+}
+
+/* Changement de couleur du lien au survol : devient blanc */
+nav a:hover {
+  color: white;
+}
+
+/* Taille du logo dans la navigation */
+.logo img {
+  width: 100px;
+  height: 80px;
+}
+
+/* Conteneur d’introduction pleine hauteur et largeur */
+.introduction {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Image de fond dans l’introduction : occupe tout l’espace, conserve les proportions */
+.introduction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Conteneur du texte d’introduction positionné en absolu au centre, fond semi-transparent */
+.texte-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Titre principal de l’introduction, grande taille, ombre portée pour lisibilité, marge en bas */
+.texte-intro h1 {
+  font-size: 4rem;
+  text-shadow: 1px 1px 4px black;
+  margin-bottom: 20px;
+}
+
+/* Paragraphe de l’introduction, taille moyenne, largeur max pour confort lecture, ombre portée */
+.texte-intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* Section principale : largeur totale, marge haute, fond jaune et coins arrondis, padding */
+section {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #FDB714;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Titres des sections centrés, texte blanc */
+section h2 {
+  text-align: center;
+  color: white;
+}
+
+/* Conteneur du contenu des sections : flexbox avec retour à la ligne, centré, avec espacement */
+section .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Images et vidéos dans les sections : taille max, coins arrondis, transition pour animation au survol */
+section .content img,
+section .content video,
+section .content iframe {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+section .content iframe {
+  aspect-ratio: 16 / 9; /* Garde un ratio vidéo standard */
+  object-fit: cover;
+}
+/* Zoom léger sur image ou vidéo au survol */
+section .content img:hover, section .content video:hover {
+  transform: scale(1.1);
+}
+
+/* Paragraphe dans les sections : largeur max, texte blanc, taille de police confortable, padding horizontal */
+section .content p {
+  max-width: 600px;
+  color: white;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+/* Contenu inversé (image à droite) pour certaines sections spécifiques */
+.lancement-mobile .content,
+.communaute-mobile .content {
+  flex-direction: row-reverse;
+}
+
+/* Contenu en disposition normale (image à gauche) */
+.gameplay-mobile .content {
+  flex-direction: row;
+}
+
+/* Pied de page : fond jaune, texte blanc centré, flexbox avec wrap */
+footer {
+  margin-top: 10px;
+  background-color: #FDB714;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+/* Liens dans le footer : noirs, padding et marge */
+footer a {
+  color: #000000;
+  padding: 5px 12px;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+/* Couleur blanche sur les liens au survol */
+footer a:hover {
+  color: white;
+}
+
+/* Dimensions des images dans le footer (ex : icônes) */
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Paragraphe dans le footer prend toute la largeur */
+footer p {
+  width: 100%;
+}
+
+/* Styles responsive pour écrans ≤ 768px : menu vertical, texte plus petit, colonnes */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .texte-intro h1 {
+    font-size: 3rem;
+  }
+
+  .texte-intro p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  section .content {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

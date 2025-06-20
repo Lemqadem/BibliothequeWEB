@@ -1,0 +1,216 @@
+body{
+    background-color:#034748 ;
+    margin: 0;
+    font-family:  'Trebuchet MS';
+}
+nav {
+  background-color: #11B5E4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  padding: 10px 20px;
+  background-color: #1481BA;
+  color: white;
+  border-radius: 30px;
+  margin: 0 5px;
+  font-weight: bold;}
+nav a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+nav a:hover {
+  color: cyan;
+}
+.logo img {
+  width: 300px;
+  height: 80px;
+}
+.introduction {
+  position: relative; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.introduction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textes-intro {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.textes-intro h1 {
+  font-size: 4rem;
+  text-shadow: 1px 1px 4px black;
+  margin-bottom: 20px;
+}
+
+.textes-intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px black;
+}
+.ceremonies {
+  max-width: 720px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+.ceremonies h2 {
+  color: white;
+}
+
+.ceremony {
+  background-color: #11b5e4;
+  padding: 25px 30px;
+  margin-bottom: 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.ceremony:hover {
+  background-color: #1481ba;
+}
+
+.ceremony h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #e0f7ff;
+  margin-bottom: 15px;
+}
+
+.ceremony p {
+  font-size: 1.1rem;
+  color: #f0f8ff;
+  margin-bottom: 15px;
+}
+
+.ceremony ul,
+.ceremony ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #d0faff;
+}
+
+.ceremony ul li,
+.ceremony ol li {
+  margin-bottom: 8px;
+}
+.link-faq{
+  display: flex;
+     flex-direction: column;
+    align-items: center;
+}
+
+.link-faq p{
+color: white;
+}
+.link-faq a{
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+.link-faq a:hover{
+  color: #36F0F0;
+}
+footer {
+  margin-top: 10px;
+  background-color: #11B5E4;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+footer a {
+    
+  color: #000000;
+  padding: 5px 12px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: white;
+}
+
+
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+
+footer p {
+  color: white;
+  width: 100%;
+}
+@media only screen and (max-width: 911px) and (min-width: 470px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .textes-intro h1 {
+    font-size: 3rem;
+  }
+
+  .textes-intro p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+
+}
+@media only screen and (max-width: 469px) {
+
+    nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav li {
+    width: 90%;
+    margin: 2px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

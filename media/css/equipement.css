@@ -1,0 +1,230 @@
+/* Applique la règle box-sizing pour inclure padding et border dans la taille des éléments, et remet à zéro marges et paddings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de base du corps de page : fond noir, police Arial sans-serif, texte en noir (à corriger si besoin) */
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+/* Barre de navigation : fond jaune, alignement horizontal avec espace entre éléments */
+nav {
+    background-color: #FDB714;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Liste horizontale des éléments de navigation, sans puces */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+/* Style des éléments du menu : fond sombre, texte jaune, coins arrondis et bordures jaunes */
+nav li {
+    padding: 10px 20px;
+    background-color: #1D1D1D;
+    color: #FDB714;
+    border-radius: 30px;
+    border: 2px solid #FDB714;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* Liens de navigation sans soulignement et en jaune */
+nav a {
+    color: #FDB714;
+    text-decoration: none;
+}
+
+/* Survol des liens : texte devient blanc */
+nav a:hover {
+    color: white;
+}
+
+/* Dimensions du logo dans la nav */
+.logo img {
+    width: 100px;
+    height: 80px;
+}
+
+/* Section principale avec fond jaune, coins arrondis et marges */
+section {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #FDB714;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Titres des sections centrés et en blanc */
+section h2 {
+    text-align: center;
+    color: white;
+}
+
+/* Conteneur du contenu de section : flexbox centré, avec espaces et retour à la ligne */
+section .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Variante pour inverser l'ordre du contenu (image à droite) */
+.reverse-content .content {
+    flex-direction: row-reverse;
+}
+
+/* Images dans les sections avec taille max, coins arrondis et transition sur zoom */
+section .content img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom sur image au survol */
+section .content img:hover {
+    transform: scale(1.1);
+}
+
+/* Texte des sections : largeur max, couleur blanche, taille lisible et padding */
+section .content p {
+    max-width: 600px;
+    color: white;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+/* Conteneur d’introduction en plein écran */
+.introduction {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Image de fond d’introduction occupant tout l’espace */
+.introduction img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texte de l’introduction positionné par-dessus, centré avec fond semi-transparent */
+.textes-intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Titre de l’introduction, gros, avec ombre portée pour meilleure lisibilité */
+.textes-intro h1 {
+    font-size: 4rem;
+    text-shadow: 1px 1px 4px black;
+    margin-bottom: 20px;
+}
+
+/* Paragraphe de l’introduction, taille moyenne, max largeur pour confort lecture, ombre portée */
+.textes-intro p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    text-shadow: 1px 1px 4px black;
+}
+
+/* Pied de page jaune, texte blanc centré, contenu flexible et wrap */
+footer {
+    margin-top: 10px;
+    background-color: #FDB714;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    flex-wrap: wrap;
+}
+
+/* Liens dans le footer, noirs avec padding et marges */
+footer a {
+    color: #000000;
+    padding: 5px 12px;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+/* Survol des liens du footer : texte blanc */
+footer a:hover {
+    color: white;
+}
+
+/* Images du footer (ex : icônes réseaux sociaux) */
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Texte dans le footer s’étendant sur toute la largeur */
+footer p {
+    width: 100%;
+}
+
+/* Adaptation responsive sous 768px : nav verticale, contenu colonne, texte réduit */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    .textes-intro h1 {
+        font-size: 3rem;
+    }
+
+    .textes-intro p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    section .content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .reverse-content .content {
+        flex-direction: column;
+    }
+
+    section .content p {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}

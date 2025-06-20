@@ -1,0 +1,174 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #034748;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: url(../images/BACK.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgba(0, 0,0, 0.2);
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* SECTION INTRO */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+h1{
+ text-align: center;
+    color: white;
+    margin: 30px 0;   
+}
+
+.intro {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 251, 251, 0.2);
+    font-size: 1.1rem;
+}
+.intro h2{
+    color: white;
+}
+.intro p{
+    color: white;
+}
+.intro a{
+    text-decoration: none;
+    color: rgb(39, 158, 255);
+}
+.intro strong{
+    color: rgb(200, 190, 255)
+}
+.link-author {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(255, 251, 251, 0.2);
+    font-size: 1.1rem;
+}
+.link-author p{
+    color:white ;
+}
+.container {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 200px;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+  border-radius: 8px;
+}
+
+
+.sites p{
+    color:white;
+}
+.description {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 8px;
+  font-size: 13px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 8px 8px;
+}
+
+.container:hover .description {
+  opacity: 1;
+}
+
+footer {
+    
+    background-color: rgba(0, 0,0, 0.2);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Cela aide à coller le footer en bas */
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    margin: 0 10px;
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a img {
+    vertical-align: middle;
+    height: 24px;
+    width: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+footer a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    footer a img {
+        height: 20px;
+        width: 20px;
+    }
+}

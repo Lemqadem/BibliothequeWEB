@@ -1,0 +1,269 @@
+body{
+    background-color:#034748 ;
+    margin: 0;
+    font-family:  'Trebuchet MS';
+}
+nav {
+  background-color: #11B5E4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  padding: 10px 20px;
+  background-color: #1481BA;
+  color: white;
+  border-radius: 30px;
+  margin: 0 5px;
+  font-weight: bold;}
+nav a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+nav a:hover {
+  color: cyan;
+}
+.logo img {
+  width: 300px;
+  height: 80px;
+}
+.introduction {
+  position: relative; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.introduction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textes-intro {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.textes-intro h1 {
+  font-size: 4rem;
+  text-shadow: 1px 1px 4px black;
+  margin-bottom: 20px;
+}
+
+.textes-intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #36F0F0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Titres des sections centrés, texte blanc */
+.section-content h2 {
+  text-align: center;
+  color: #1481BA;
+}
+
+/* Conteneur du contenu des sections : flexbox avec retour à la ligne, centré, avec espacement */
+.section-content .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Images et vidéos dans les sections : taille max, coins arrondis, transition pour animation au survol */
+.section-content .content img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Paragraphe dans les sections : largeur max, texte blanc, taille de police confortable, padding horizontal */
+.section-content .content p {
+  max-width: 600px;
+  color: #034748;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+.container{
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+   
+}
+
+
+
+
+
+
+
+
+
+
+.link-faq{
+  display: flex;
+     flex-direction: column;
+    align-items: center;
+}
+.link-faq p{
+color: white;
+}
+.link-faq a{
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+.link-faq a:hover{
+  color: #36F0F0;
+}
+footer {
+  margin-top: 10px;
+  background-color: #11B5E4;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+
+footer a {
+    
+  color: #000000;
+  padding: 5px 12px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: white;
+}
+
+
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+footer p {
+  color: white;
+  width: 100%;
+}
+@media only screen and (max-width: 911px) and (min-width: 470px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .textes-intro h1 {
+    font-size: 3rem;
+  }
+
+  .textes-intro p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .section-content {
+    width: 100%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .section-content .content {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .section-content .content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 469px) {
+
+    nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav li {
+    width: 90%;
+    margin: 2px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

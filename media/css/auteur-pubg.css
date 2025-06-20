@@ -1,0 +1,215 @@
+/* Applique le modèle de boîte pour éviter les débordements de largeur */
+* {
+  box-sizing: border-box;
+}
+
+/* Style général de la page : fond noir, texte blanc, police sans-serif */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+
+/* Aligne le logo en haut à gauche dans le header */
+.logo {
+  display: flex;
+  align-items: start;
+}
+
+/* Barre de navigation : fond jaune, alignement horizontal, espacement */
+nav {
+  background-color: #FDB714;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Liste horizontale pour les liens du menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style des éléments de menu : fond sombre, texte jaune, bord arrondi */
+nav li {
+  padding: 10px 20px;
+  background-color: #1D1D1D;
+  color: #FDB714;
+  border-radius: 30px;
+  border: 2px solid #FDB714;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* Liens de navigation sans soulignement, couleur jaune */
+nav a {
+  color: #FDB714;
+  text-decoration: none;
+}
+
+/* Effet de survol sur les liens : devient blanc */
+nav a:hover {
+  color: white;
+}
+
+/* Dimensions du logo dans la navbar */
+.logo img {
+  width: 100px;
+  height: 80px;
+}
+
+/* Titre principal centré, couleur blanche */
+h1 {
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+
+/* Style du titre h2 dans content-container */
+.content-container h2 {
+  color: #1D1D1D; /* Couleur texte sombre */
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Conteneur principal du contenu : fond jaune et coins arrondis */
+.content-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FDB714;
+  border-radius: 10px;
+}
+
+/* Organisation du contenu en flex-wrap, avec espaces */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Image à gauche du texte, avec taille et bords arrondis */
+.content img {
+  width: 40%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Zone de texte à côté de l'image */
+.text-content {
+  width: 55%;
+  color: #1D1D1D;
+  font-size: 18px;
+}
+
+/* Espacement entre les paragraphes */
+.text-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Liens dans le texte : soulignés et effet hover blanc */
+.text-content a {
+  color: #1D1D1D;
+  text-decoration: underline;
+}
+
+.text-content a:hover {
+  color: white;
+}
+
+/* Accentuation d’un mot ou passage important */
+.content strong {
+  color: red;
+}
+
+/* Pied de page : fond jaune, texte blanc, centré et responsive */
+footer {
+  margin-top: 10px;
+  background-color: #FDB714;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+/* Liens du footer en noir, changent en blanc au survol */
+footer a {
+  color: #000000;
+  padding: 5px 12px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Icônes du footer */
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Texte du footer */
+footer p {
+  color: white;
+  width: 100%;
+}
+.en-savoir-plus{
+
+position: static;
+padding: 5px;
+text-align: center;
+color: white;
+}
+.en-savoir-plus a{
+color: white;
+position: relative;
+text-decoration: none;
+}
+.en-savoir-plus a:hover{
+color: cyan;
+}
+/* Responsive : réorganise la nav et le contenu en colonnes sur petit écran */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content img,
+  .text-content {
+    width: 100%;
+  }
+  footer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,244 @@
+/* Permet une gestion plus prévisible des marges/paddings dans toutes les boîtes */
+* {
+  box-sizing: border-box;
+}
+
+/* Style de base pour le corps de la page : fond noir et texte noir (attention à la lisibilité) */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+/* Barre de navigation jaune avec éléments espacés sur toute la largeur */
+nav {
+  background-color: #FDB714;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Liste horizontale sans puces pour les liens de navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Chaque élément du menu est stylé comme un bouton avec un contour jaune */
+nav li {
+  padding: 10px 20px;
+  background-color: #1D1D1D;
+  color: #FDB714;
+  border-radius: 30px;
+  border: 2px solid #FDB714;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* Liens sans soulignement, couleurs cohérentes avec la charte du site */
+nav a {
+  color: #FDB714;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lien blanc au survol pour un meilleur effet visuel */
+nav a:hover {
+  color: white;
+}
+
+/* Taille fixe pour le logo en haut de page */
+.logo img {
+  width: 100px;
+  height: 80px;
+}
+
+/* Bloc de section principal : fond jaune et structure en colonne */
+section {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin-top: 20px;
+  background-color: #FDB714;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Titres de section centrés et en blanc pour le contraste */
+section h2 {
+  text-align: center;
+  color: white;
+}
+
+/* Conteneur flexible pour organiser image + texte côte à côte */
+section .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Variante pour inverser l'ordre image/texte si besoin */
+.reverse-content .content {
+  flex-direction: row-reverse;
+}
+
+/* Image responsive avec effet zoom au survol */
+section .content img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Petit effet de zoom sympa quand on passe la souris */
+section .content img:hover {
+  transform: scale(1.1);
+}
+
+/* Texte bien lisible, largeur adaptée et couleur contrastée */
+section .content p {
+  width: 100%;
+  max-width: 600px;
+  color: white;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+/* Section d’intro qui prend tout l’écran */
+.introduction {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Image d’arrière-plan qui couvre tout l’espace sans se déformer */
+.introduction img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texte centré en overlay avec fond semi-transparent pour la lisibilité */
+.textes-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Grand titre stylé avec ombre portée */
+.textes-intro h1 {
+  font-size: 4rem;
+  text-shadow: 1px 1px 4px black;
+  margin-bottom: 20px;
+}
+
+/* Paragraphe d’intro lisible sur fond image grâce à l’ombre */
+.textes-intro p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  text-shadow: 1px 1px 4px black;
+}
+
+/* Pied de page bien visible, structuré en ligne avec du centrage */
+footer {
+  margin-top: 10px;
+  background-color: #FDB714;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+/* Liens sombres dans le footer, espacés proprement */
+footer a {
+  color: #000000;
+  padding: 5px 12px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+/* Comme ailleurs, changement de couleur au survol */
+footer a:hover {
+  color: white;
+}
+
+/* Taille standard pour les icônes du footer (ex : LinkedIn) */
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Le copyright prend toute la largeur, centré */
+footer p {
+  color: white;
+  width: 100%;
+}
+
+/* Responsive mobile : tout s’empile proprement sur petits écrans */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .textes-intro h1 {
+    font-size: 3rem;
+  }
+
+  .textes-intro p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  section .content {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .reverse-content .content {
+    flex-direction: column;
+  }
+
+  section .content p {
+    font-size: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,236 @@
+/* Applique box-sizing à tous les éléments pour une gestion plus prévisible des tailles */
+* {
+  box-sizing: border-box;
+}
+
+/* Style de base du body : fond noir, texte blanc, police sans-serif */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Conteneur du logo, aligné en haut */
+.logo {
+  display: flex;
+  align-items: start;
+}
+
+/* Barre de navigation principale */
+nav {
+  background-color: #FDB714;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Liste de navigation sans puces et en ligne */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Liens de menu stylisés comme des boutons */
+nav li {
+  padding: 10px 20px;
+  background-color: #1D1D1D;
+  color: #FDB714;
+  border-radius: 30px;
+  border: 2px solid #FDB714;
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* Lien de navigation par défaut */
+nav a {
+  color: #FDB714;
+  text-decoration: none;
+}
+
+/* Effet hover sur les liens du menu */
+nav a:hover {
+  color: white;
+}
+
+/* Taille fixe pour le logo */
+.logo img {
+  width: 100px;
+  height: 80px;
+}
+
+/* Section principale contenant le formulaire */
+main {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Conteneur du contenu du formulaire, centré et limité en largeur */
+.form-content {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Titre principal du formulaire */
+.form-content h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #FDB714;
+}
+
+/* Formulaire stylisé avec fond sombre et encadré doré */
+form {
+  background-color: #1D1D1D;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid #FDB714;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(253, 183, 20, 0.3);
+}
+
+/* Étiquettes du formulaire, visibles au-dessus des champs */
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #FDB714;
+  font-weight: bold;
+}
+
+/* Champs de texte, email et zone de saisie du formulaire */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #FDB714;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+}
+
+/* Zone de texte redimensionnable verticalement */
+form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Bouton d'envoi du formulaire, stylé comme un CTA */
+form input[type="submit"] {
+  background-color: #FDB714;
+  color: #000000;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Effet hover sur le bouton d'envoi */
+form input[type="submit"]:hover {
+  background-color: #000000;
+  color: #FDB714;
+  border: 2px solid #FDB714;
+  transform: scale(1.05);
+}
+
+/* Style pour les astérisques */
+.required {
+  color: #FDB714; /* jaune PUBG */
+  font-weight: bold;
+}
+
+/* Texte petit sous le formulaire */
+form .small-text {
+  font-size: 12px;
+  color: #cccccc;
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* Pied de page jaune avec disposition flexible et police uniforme */
+footer {
+  margin-top: 10px;
+  background-color: #FDB714;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+/* Liens du footer en noir, changent en blanc au survol */
+footer a {
+  color: #000000;
+  padding: 5px 12px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Icônes du footer */
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Texte du footer */
+footer p {
+  color: white;
+  width: 100%;
+}
+
+/* Met en valeur le texte en gras dans le footer */
+footer p strong {
+  color: white;
+}
+
+/* ----------------------- */
+/*        RESPONSIVE       */
+/* ----------------------- */
+
+/* Navigation mobile : menu vertical */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* Réduction du padding du formulaire sur petit écran */
+  form {
+    padding: 20px 15px;
+  }
+
+  /* Footer en colonne sur mobile */
+  footer {
+    flex-direction: column;
+  }
+}

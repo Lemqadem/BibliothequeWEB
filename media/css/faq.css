@@ -1,0 +1,145 @@
+body{
+    background-color:#034748 ;
+    margin: 0;
+    font-family:  'Trebuchet MS';
+}
+nav {
+  background-color: #11B5E4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  padding: 10px 20px;
+  background-color: #1481BA;
+  color: white;
+  border-radius: 30px;
+  margin: 0 5px;
+  font-weight: bold;}
+nav a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+nav a:hover {
+  color: cyan;
+}
+.logo img {
+  width: 300px;
+  height: 80px;
+}
+
+.faq-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.faq-section h1 {
+  text-align: center;
+    color: white;
+    margin: 30px 0;
+}
+
+
+.faq-box {
+  background-color: #1481BA;
+  border: 2px solid #11B5E4;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: default;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-box:hover {
+  background-color: #11B5E4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #11B5E4;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: #000000;
+    padding: 5px 12px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer p {
+    color: white;
+    width: 100%;
+}
+@media only screen and (max-width: 911px) and (min-width: 470px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+    width: 80%;
+    text-align: center;
+  
+  }}
+
+  @media only screen and (max-width: 469px) {
+
+    nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav li {
+    width: 90%;
+    margin: 2px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
