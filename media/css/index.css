@@ -175,6 +175,18 @@ footer a img:hover {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
+    @media (max-width: 600px) {
+    #bg-video {
+        display: none;
+    }
+
+    body {
+        background-image: url('../images/BACK.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
     nav ul {
         flex-direction: column;
         gap: 15px;
