@@ -2,7 +2,7 @@
 # 🌐 Bibliothèque Web d'Ervan Lemqadem
 
 Bienvenue dans ma bibliothèque web, un espace où vous pourrez retrouver les différents sites web que j'ai réalisé, dans le cadre de projets scolaire ou non. J'espère que vous apprecierez mon travail :) !
-
+Vous retrouverez la documentation relative à ce projet en cliquant ici (seul les membres EduVaud y ont accès): https://eduvaud-my.sharepoint.com/:f:/g/personal/po53roe_eduvaud_ch/En60n6VZgixNhE6W-yNkslQBy_0ruiQgUzOSzF98H_VWwA
 ---
 
 ## 🚀 À propos
