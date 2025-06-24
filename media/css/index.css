@@ -54,7 +54,7 @@ nav a:hover {
     color: #00bcd4;
 }
 
-/* SECTION INTRO */
+
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -146,7 +146,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Cela aide à coller le footer en bas */
+    margin-top: auto;
 }
 
 footer p {
